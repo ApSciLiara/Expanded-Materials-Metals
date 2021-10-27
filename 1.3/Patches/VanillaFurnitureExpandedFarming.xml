@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Farming Module -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Furniture Expanded - Farming</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef [defName = "VFE_PlanterBox"]/stuffCategories</xpath>
+			<value>
+				<li>VMEu_ConcreteStuffCategory</li>
+			</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef [defName = "VFE_PlanterBox_Tilable"]/stuffCategories</xpath>
+			<value>
+				<li>VMEu_ConcreteStuffCategory</li>
+			</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<!-- Production Module -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Furniture Expanded - Production</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef [defName = "VFE_SmithyCabinet"]/costList</xpath>
+			<value>
+				<costList>
+					<Steel>100</Steel>
+					<VMEu_Iron>50</VMEu_Iron>
+				</costList>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef [defName = "VFE_TailorCabinet"]/costList</xpath>
+			<value>
+				<costList>
+					<Steel>70</Steel>
+					<VMEu_Iron>30</VMEu_Iron>
+				</costList>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef [defName = "VFE_FueledSmelter"]/costList</xpath>
+			<value>
+				<costList>
+					<Steel>50</Steel>
+					<VMEu_Iron>120</VMEu_Iron>
+				</costList>
+			</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

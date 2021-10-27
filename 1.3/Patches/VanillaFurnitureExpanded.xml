@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Vanilla Furniture Expanded -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Furniture Expanded</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "Radio_Industrial"]/costList</xpath>
+				<value>
+					<costList>
+					  <Steel>25</Steel>
+					  <VMEu_Copper>75</VMEu_Copper>
+					  <ComponentIndustrial>4</ComponentIndustrial>
+					</costList>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<!-- Medical Module -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Furniture Expanded - Medical Module</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef [defName = "Bed_OperatingTable"]/costList</xpath>
+				<value>
+					<costList>
+					  <VMEu_Iron>40</VMEu_Iron>
+					  <ComponentIndustrial>2</ComponentIndustrial>
+					</costList>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<!-- Other Mods -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Factions Expanded - Settlers</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "ChemBoiler"]/costList</xpath>
+				<value>
+					<costList>
+						<VMEu_RockPowder>25</VMEu_RockPowder>
+						<Steel>40</Steel>
+						<VMEu_Iron>35</VMEu_Iron>
+						<Chemfuel>75</Chemfuel>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "Building_ChemshineBarrel"]/costList</xpath>
+				<value>
+					<costList>
+					  <VMEu_Iron>10</VMEu_Iron>
+					  <WoodLog>30</WoodLog>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef [defName = "Post"]/stuffCategories</xpath>
+				<value>
+					<li>VMEu_ConcreteStuffCategory</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef [defName = "ChemlampPost"]/stuffCategories</xpath>
+				<value>
+					<li>VMEu_ConcreteStuffCategory</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<!-- Barbar Table -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Hair Expanded</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "VHE_TableBarber"]/costList</xpath>
+				<value>
+					<costList>
+						<VMEu_Iron>20</VMEu_Iron>
+					</costList>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

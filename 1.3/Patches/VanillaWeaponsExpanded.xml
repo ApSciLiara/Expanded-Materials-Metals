@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Weapons Expanded - Laser</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef [defName = "VWEL_Gun_TeslaGun"]/costList</xpath>
+				<value>
+					<costList>
+						<VMEu_Copper>50</VMEu_Copper>
+						<Plasteel>115</Plasteel>
+						<ComponentSpacer>8</ComponentSpacer>
+					</costList>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Factions Expanded - Vikings</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef [defName = "VFEV_Shield_Round"]/costList</xpath>
+				<value>
+					<costList>
+						<WoodLog>50</WoodLog>
+						<VMEu_Iron>20</VMEu_Iron>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>/Defs/TraderKindDef [defName = "VFEV_Caravan_Looter"]/stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VMEu_Coal</thingDef>
+						<countRange>100~300</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VMEu_Copper</thingDef>
+						<countRange>100~200</countRange>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

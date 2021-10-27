@@ -1,0 +1,48 @@
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Expanded Prosthetics and Organ Engineering</li>
+        <li>Expanded Prosthetics and Organ Engineering - Forked</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+
+            <!-- Patch all Basic parts -->
+            <li Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationTest">
+                        <xpath>/Defs/ThingDef [@ParentName = "Basic"]/costList/Steel</xpath>
+                        <success>Normal</success>
+                    </li>
+                    <li Class="MaterialPatchingUtility.PatchOperationBalanceMaterial">
+                        <xpath>/Defs/ThingDef [@ParentName = "Basic"]/costList/Steel</xpath>
+                        <percentage>60</percentage>
+                        <material>VMEu_Iron</material>
+                    </li>
+                </operations>
+            </li>
+
+            <!-- Patch all Simple parts -->
+            <li Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationTest">
+                        <xpath>/Defs/ThingDef [@ParentName = "Simple"]/costList/Steel</xpath>
+                        <success>Normal</success>
+                    </li>
+                    <li Class="MaterialPatchingUtility.PatchOperationBalanceMaterial">
+                        <xpath>/Defs/ThingDef [@ParentName = "Simple"]/costList/Steel</xpath>
+                        <percentage>50</percentage>
+                        <material>VMEu_Iron</material>
+                    </li>
+                </operations>
+            </li>
+
+        </operations>
+    </match>
+</Operation>
+
+</Patch>

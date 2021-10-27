@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Vanilla Furniture Expanded -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Factions Expanded - Mechanoids</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			
+			
+			<!-- ##### Components ##### -->
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "VFEM_ElectronicsFabricationFactory_ComponentAssembler"]/comps/li [@Class = "ItemProcessor.CompProperties_ItemProcessor"]/numberOfInputs</xpath>
+				<value>
+					<numberOfInputs>2</numberOfInputs>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_ElectronicsFabricationFactory_ComponentAssembler_SteelRecipe"]/items</xpath>
+				<value>
+					<items>
+						<li>Steel</li>
+					</items>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_ElectronicsFabricationFactory_ComponentAssembler_SteelRecipe"]</xpath>
+				<value>
+					<secondItems>
+						<li>VMEu_Copper</li>
+					</secondItems>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_ElectronicsFabricationFactory_ComponentAssembler_SteelRecipe"]/amount</xpath>
+				<value>
+					<amount>
+						<li>6</li>
+						<li>6</li>
+					</amount>
+				</value>
+			</li>
+
+			<!-- ##### Plasteel ##### -->
+			<!-- <li Class="PatchOperationReplace">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_MasonryAndMetallicsFactory_PlasteelForge_Sandstone"]/items</xpath>
+				<value>
+					<items>
+						<li>Steel</li>
+					</items>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_MasonryAndMetallicsFactory_PlasteelForge_Sandstone"]/secondItems</xpath>
+				<value>
+					<secondItems>
+						<li>VMEu_Lithium</li>
+					</secondItems>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_MasonryAndMetallicsFactory_PlasteelForge_Sandstone"]/thirdItems</xpath>
+				<value>
+					<thirdItems>
+						<li>VMEu_DarkOil</li>
+					</thirdItems>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_MasonryAndMetallicsFactory_PlasteelForge_Sandstone"]/amount</xpath>
+				<value>
+					<amount>
+						<li>30</li>
+						<li>15</li>
+						<li>30</li>
+					</amount>
+				</value>
+			</li> -->
+			
+			<!-- <li Class="PatchOperationRemove">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_MasonryAndMetallicsFactory_PlasteelForge_Limestone"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_MasonryAndMetallicsFactory_PlasteelForge_Granite"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_MasonryAndMetallicsFactory_PlasteelForge_Slate"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ItemProcessor.CombinationDef [defName = "VFEM_MasonryAndMetallicsFactory_PlasteelForge_Marble"]</xpath>
+			</li> -->
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

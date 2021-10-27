@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Reduce Steel Generation -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "MineableSteel"]/building</xpath>
+		<value>
+			<building>
+			  <isResourceRock>true</isResourceRock>
+			  <mineableThing>Steel</mineableThing>
+			  <mineableYield>40</mineableYield>
+			  <mineableScatterCommonality>0</mineableScatterCommonality>
+			  <mineableScatterLumpSizeRange>0~0</mineableScatterLumpSizeRange>
+			</building>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Steel"]/deepCommonality</xpath>
+		<value>
+			<deepCommonality>0</deepCommonality>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Steel"]/deepLumpSizeRange</xpath>
+		<value>
+			<deepLumpSizeRange>0~0</deepLumpSizeRange>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Steel"]/deepCountPerPortion</xpath>
+		<value>
+			<deepCountPerPortion>0</deepCountPerPortion>
+		</value>
+	</Operation>
+	
+	<!-- Reduce Plasteel Generation -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "MineablePlasteel"]/building</xpath>
+		<value>
+			<building>
+			  <isResourceRock>true</isResourceRock>
+			  <mineableThing>Plasteel</mineableThing>
+			  <mineableYield>40</mineableYield>
+			  <mineableScatterCommonality>0.5</mineableScatterCommonality>
+			  <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+			</building>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Plasteel"]/deepCommonality</xpath>
+		<value>
+			<deepCommonality>1</deepCommonality>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Plasteel"]/deepLumpSizeRange</xpath>
+		<value>
+			<deepLumpSizeRange>2~10</deepLumpSizeRange>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Plasteel"]/deepCountPerPortion</xpath>
+		<value>
+			<deepCountPerPortion>10</deepCountPerPortion>
+		</value>
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Factions Expanded - Medieval</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "VFEM_Bow_HeavyCrossbow"]/costList</xpath>
+				<value>
+					<costList>
+					  <WoodLog>80</WoodLog>
+					  <VMEu_Iron>25</VMEu_Iron>
+					  <ComponentIndustrial>1</ComponentIndustrial>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "VFEM_Shield_Heater"]/costList</xpath>
+				<value>
+					<costList>
+						<VMEu_Iron>80</VMEu_Iron>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "VFEM_WineBarrel"]/costList</xpath>
+				<value>
+					<costList>
+						<VMEu_Iron>10</VMEu_Iron>
+						<WoodLog>30</WoodLog>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef [defName = "VFEM_Base_Medieval_Standard"]/stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_SingleDef">
+					  <thingDef>VMEu_Iron</thingDef>
+					  <countRange>
+					    <min>500</min>
+					    <max>800</max>
+					  </countRange>
+				    </li>
+					<li Class="StockGenerator_SingleDef">
+					  <thingDef>VMEu_Copper</thingDef>
+					  <countRange>
+					    <min>300</min>
+					    <max>500</max>
+					  </countRange>
+				    </li>
+					<li Class="StockGenerator_SingleDef">
+					  <thingDef>VMEu_Bronze</thingDef>
+					  <countRange>
+					    <min>500</min>
+					    <max>800</max>
+					  </countRange>
+				    </li>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+	
+</Patch>

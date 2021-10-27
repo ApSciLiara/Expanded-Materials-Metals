@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Mechanoids -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Factions Expanded - Mechanoids</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+
+			<!-- Autopatch Machines -->
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationTest">
+						<xpath>Defs/ThingDef[@ParentName = "BuildingBase" and costList/VFE_ComponentMechanoid and not(comps/ li[@Class = "VFE.Mechanoids.CompProperties_MachineChargingStation"])]/costList/Steel</xpath>
+						<success>Normal</success>
+					</li>
+					<li Class="MaterialPatchingUtility.PatchOperationBalanceMaterial">
+						<xpath>Defs/ThingDef[@ParentName = "BuildingBase" and costList/VFE_ComponentMechanoid and not(comps/ li[@Class = "VFE.Mechanoids.CompProperties_MachineChargingStation"])]/costList/Steel</xpath>
+						<percentage>45</percentage>
+						<material>VMEu_Concrete</material>
+					</li>
+				</operations>
+			</li>
+
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- SoS2 -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Save Our Ship 2</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef [defName = "ShipHeatConduit"]/costList</xpath>
+				<value>
+					<costList>
+					  <VMEu_Bronze>1</VMEu_Bronze>
+					  <Plasteel>1</Plasteel>
+					</costList>
+				</value>
+			</li>
+			
+			
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

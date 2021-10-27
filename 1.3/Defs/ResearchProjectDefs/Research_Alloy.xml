@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ResearchProjectDef>
+    <defName>VMEu_ConcreteMaking</defName>
+    <label>concrete making</label>
+    <description>Cook grounded stone and iron dust to make a strong mix used to make walls, floors and some structures.</description>
+    <baseCost>200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>4.10</researchViewY>
+	<tags>
+      <li>ClassicStart</li>
+    </tags>
+	<prerequisites>
+		<li>Stonecutting</li>
+		<li>Smithing</li>
+	</prerequisites>
+  </ResearchProjectDef>
+  
+	<!-- Alloys -->
+	
+  
+  <ResearchProjectDef>
+    <defName>VMEu_SteelAlloying</defName>
+    <label>steel alloying</label>
+    <description>Smelt Iron along with carbon obtained from wood using high temperatures, allowing you to alloy steel, a much harder and efficient material.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.40</researchViewY>
+	<prerequisites>
+		<li>Smithing</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+
+</Defs>
